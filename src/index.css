@@ -13,3 +13,26 @@ html {
   background: #fff;
   background-color: rgb(214, 210, 210);
 }
+
+.loading {
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.error {
+  color: red;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(240, 28, 28, 0.25);
+  background-color: rgb(168, 100, 100);
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  margin-top: 2rem;
+}

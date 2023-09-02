@@ -35,11 +35,10 @@ function App() {
         throw new Error("خطا در انجام عملیات");
       }
       const data = await response.json();
-      //console.log(data);
+
       const itemList = [];
       for (let item of data) {
-        //const price = await getPrice(item.link);
-        const price = "25000";
+        const price = await getPrice(item.link);
 
         const image = item._links["wp:featuredmedia"]
           ? await getImg(item._links["wp:featuredmedia"][0].href)
@@ -60,22 +59,15 @@ function App() {
     }
 
     setIsLoading(false);
-
-    //console.log(data[0].title);
-    //console.log(itemList);
-    //const url = data[0].link;
-    //console.log(url);
-    //const da = await res.json();
-    // console.log(res);
   };
   useEffect(() => {
     fetchData();
   }, []);
   return (
     <div>
-      {isLoading && <p>در حال گرفتن اطلاعات...</p>}
+      {isLoading && <p className="loading">در حال گرفتن اطلاعات...</p>}
       {!isLoading && !error && <ProductList items={items} />}
-      {!isLoading && error && <p>خطا در انجام عملیات</p>}
+      {!isLoading && error && <p className="error">خطا در انجام عملیات</p>}
     </div>
   );
 }

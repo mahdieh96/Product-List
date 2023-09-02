@@ -1,0 +1,24 @@
+.item {
+  list-style: none;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  font-size: inherit;
+}
+
+.price {
+  display: block;
+
+  margin: 1rem;
+  font-weight: bold;
+}
+.about {
+  display: block;
+  margin: 1rem;
+}
+.item img {
+  display: block;
+  margin: auto;
+  width: 70%;
+}

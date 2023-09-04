@@ -11,10 +11,11 @@ export const ProductList = (props) => {
           id={item.id}
           price={item.price}
           img={item.img}
+          key={item.id}
         />
       ))
     ) : (
-      <p>آیتمی برای نمایش وجود ندارد.</p>
+      <p className="error">آیتمی برای نمایش وجود ندارد.</p>
     );
   return <ul className={classes["item-list"]}>{content}</ul>;
 };

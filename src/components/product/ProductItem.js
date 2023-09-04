@@ -4,7 +4,7 @@ export const ProductItem = (props) => {
   return (
     <li className={classes.item}>
       <h2>{props.title}</h2>
-      <img src={props.img} />
+      <img src={props.img} alt={`نصویر یک ${props.title}`} />
       <span
         dangerouslySetInnerHTML={{ __html: props.about }}
         className={classes.about}
